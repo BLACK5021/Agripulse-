@@ -1,42 +1,38 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AgriPulse - MVP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌾 AgriPulse Advisory</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🌾 AgriPulse (MVP)</h1>
+    <header>
+      <h1>🌾 AgriPulse</h1>
+      <p>Smart Farming Assistant for Smallholder Farmers</p>
+    </header>
+
     <section class="card">
-      <h2>Crop Advisory</h2>
-      <input id="crop" placeholder="Crop (e.g., maize)" />
-      <input id="location" placeholder="Location (e.g., Nairobi)" />
-      <button id="getAdvice">Get Advice</button>
-      <pre id="adviceOut"></pre>
+      <h2>Get Crop Advisory</h2>
+      <input type="text" id="crop" placeholder="Enter crop (e.g. maize)" />
+      <input type="text" id="location" placeholder="Enter location (e.g. Nairobi)" />
+      <button onclick="getAdvice()">Get Advice</button>
+      <p id="advice"></p>
     </section>
 
     <section class="card">
       <h2>Marketplace</h2>
-      <input id="farmerName" placeholder="Farmer name" />
-      <input id="mCrop" placeholder="Crop" />
-      <input id="quantity" placeholder="Quantity (kg)" />
-      <input id="price" placeholder="Price (KSh) - optional" />
-      <button id="postListing">Post Listing</button>
-      <h3>Recent listings</h3>
+      <input type="text" id="listing" placeholder="What do you want to sell?" />
+      <button onclick="postListing()">Post Listing</button>
       <ul id="listings"></ul>
     </section>
-
-    <section class="card">
-      <h2>SMS (placeholder)</h2>
-      <input id="phone" placeholder="+254700000000" />
-      <input id="message" placeholder="Message" />
-      <button id="sendSms">Send SMS (placeholder)</button>
-      <div id="smsStatus"></div>
-    </section>
-
   </div>
+
+  <footer>
+    <p>🚀 Powered by AgriPulse — Empowering Farmers, Feeding Nations.</p>
+  </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
